@@ -1,0 +1,14 @@
+https://codepen.io/sajadhsm/pen/odaBdd
+https://codepen.io/drehimself/pen/KdXwxR
+https://codepen.io/tiantsoa/pen/RwpwoWY
+
+
+socket.join(user_id);
+  socket.on("message", (data) => {
+    console.log(data);
+    usp.to(user_id).emit("message", data);
+  });
+  socket.on("typing", (data) => {
+    console.log(data);
+    usp.to(user_id).emit("typing", data);
+  });
